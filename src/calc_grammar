@@ -1,0 +1,15 @@
+alph = a|b|c|...|x|y|z|A|B|C|...|X|Y|Z
+funName = exp|sin|cos|tan|asin|acos|atan|sinh|cosh|tanh|asinh|acosh|atanh
+number = [-]float
+var = x
+atom = number|var
+
+addOp = +|-
+mulOp = *|/
+expOp = ^
+
+expr = addTerm {addop addTerm}
+addTerm = mulTerm {mulOp mulTerm}
+mulTerm = expTerm {expOp expTerm}
+expTerm = funTerm | atom | (expr)
+funTerm = funName(expr)
