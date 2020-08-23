@@ -5,6 +5,7 @@ module Parser (eval, parseExpr) where
 import Text.ParserCombinators.Parsec
 import Text.Read (read)
 import Numeric (readFloat)
+import Control.Monad (join)
 
 data Expr a = Add (Expr a) (Expr a)
             | Sub (Expr a) (Expr a)
@@ -125,4 +126,8 @@ parens = between (char '(') (char ')')
 -- Export ---
 
 parseExpr :: RealFrac a => String -> Either ParseError (Expr a)
-parseExpr = parse expr "error"
+parseExpr = parse expr "error" . removeSpaces
+  where
+    removeSpaces = join . map replace
+    replace ' ' = []
+    replace c = [c]
