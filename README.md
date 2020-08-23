@@ -5,7 +5,7 @@ The complex numbers can be obtained by adjoining an element <img src="/svgs/6c9d
 
 Similarly, we can obtain a new number system called the dual numbers by adjoining an element <img src="/svgs/ad6370c8c8de22b67ebb85cbc747ef57.svg" align=middle width=45.17680365pt height=26.76175259999998pt/>.
 
-Using these basic properties, we can apply the dual numbers to Taylor series to extend functions such as <img src="/svgs/08d1a50de86a69ca45ad7cf5e9c66ae7.svg" align=middle width=178.03639754999998pt height=24.7161288pt/>. This allows us to effortlessly compute derivatives of complicated functions using dual numbers.
+Using these basic properties, we can apply the dual numbers to Taylor series to extend functions such as addition, multiplication, and trigonometric functions to the dual numbers. The resulting functions, if differentiable, have the special property that <img src="/svgs/08d1a50de86a69ca45ad7cf5e9c66ae7.svg" align=middle width=178.03639754999998pt height=24.7161288pt/>. This allows us to effortlessly compute derivatives of complicated functions using dual numbers.
 
 ## Purpose
 This program uses the properties outlined above to numerically compute derivatives of mathematical functions using dual numbers. The user can enter a function, the number of derivatives to take, and the point at which to evaluate the derivative.
